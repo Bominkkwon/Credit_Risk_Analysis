@@ -32,3 +32,27 @@ After evaluating the performance of these models and I was able to make a writte
 ![](img/NaiveRandomOversampling.png)
 
 The accuracy score for the random oversampling is 0.65. The precision for high_risk is 0.01, very low and high for the low risk, indicating an overfitting for the low_risk. The recall (sensitivity) for both cases are not ideal.
+
+
+
+#### SMOTE Oversampling
+
+![](img/SMOTEOversampling.png)
+
+The accuracy score for the SMOTE oversampling is 0.61. The precision for high_risk is 0.01, very low and high for the low risk, indicating an overfitting for the low_risk. The recall (sensitivity) for both cases are not ideal and lower than the Naive Random Oversampling.
+
+
+#### Undersampling
+
+![](img/Undersampling.png)
+
+The accuracy score for the random oversampling is 0.51.The precision for high_risk is 0.01, very low and high for the low risk, indicating an overfitting for the low_risk. The recall (sensitivity) for both cases are not good.
+
+#### Combination (Over and Under) Sampling
+
+![](img/CombinationSampling.png)
+
+The accuracy score for the random oversampling is 0.6. The precision for high_risk is 0.01, very low and high for the low risk, indicating an overfitting for the low_risk. The recall (sensitivity) for both cases are not good.
+
+## Summary
+In the first four models we undersampled, oversampled and did a combination of both to try and determine which model is best at predicting which loans are the highest risk. The next two models we resampled the data using ensemble classifiers to try and predict which which loans are high or low risk. In our first four models our accuracy score is not as high as the ensemble classifiers and the recall in the oversampling/undersampling/mixed models is low as well. Typically in your models you want a good balance of recall and precision which is why I recommend the ensemble classifiers over the first four models. It appears that the Easy Ensemble had the best balance of all the models because of it's high accuracy score and good balance of precision and recall scores.
